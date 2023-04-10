@@ -1,0 +1,19 @@
+            <div class="minMaxWrapper">
+              <input
+                class="filterMin"
+                type="number"
+                placeholder="От"
+                min="1000"
+                max="10000"
+                value="1000"
+              />
+              <input
+                class="filterMax"
+                type="number"
+                placeholder="До"
+                min="10000"
+                max="100000"
+                value="10000"
+                def
+              />
+            </div>
