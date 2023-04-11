@@ -1,0 +1,84 @@
+/* Header */
+.header {
+    display: flex;
+    margin: 0 auto;
+
+    width: 100%;
+    /* height: 791px; */
+    height: 41%;
+    
+
+    background-image: url(../images/header/Бэкграунд.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+}
+
+.bar {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 38px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+.logo {
+}
+.logoText {
+    text-transform: uppercase;
+}
+.nav {
+}
+.navigationPages {
+    display: flex;
+    gap: 73px;
+}
+.page {
+   align-self: center;
+}
+.profile {
+}
+.language{
+    color: var(--white);
+}
+.headerTitle{
+    width: 100%;
+
+    margin: 13% 5px 31.5% 0;
+
+    /* 150px  7.8*/
+
+    font-family: 'Goldman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 170px;
+    line-height: 204px;
+    
+    text-transform: uppercase;
+    
+    background: linear-gradient(180deg, #F3F3F3 55.15%, rgba(243, 243, 243, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+}
+.headerImg{
+    width: 80%; 
+    /* 48.6 */
+    height: 65%;
+
+    /* height 41-42% */
+
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6%;
+    margin: auto;
+}

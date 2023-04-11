@@ -38,9 +38,9 @@ function handleEnd() {
   }
 }
 function Next() {
-  offset -= width;
+  offset -= width + 40;
   page++;
-  if (offset <= -width * 2) {
+  if (offset <= -width * 6) {
     offset = 0;
     page = 0;
     // sliderList[4].classList.toggle("activeDot");
@@ -51,11 +51,11 @@ function Next() {
   sliderLine.style.left = offset + "px";
 }
 function Prev() {
-  offset += width;
+  offset += width + 40;
   page--;
   if (offset > 0) {
-    offset = -width; //1484
-    page = 1;
+    offset = (-width + 40) * 5;
+    page = 5;
     // sliderList[0].classList.toggle("activeDot");
   } else {
     //  sliderList[page + 1].classList.toggle("activeDot");
@@ -64,6 +64,6 @@ function Prev() {
   // sliderList[page].classList.toggle("activeDot");
 }
 function init() {
-  width = document.querySelector(".slider").offsetWidth;
+  width = document.querySelector(".sliderPage").offsetWidth;
   console.log(width);
 }
