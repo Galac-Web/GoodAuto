@@ -10,42 +10,7 @@
     width: 100%;
     gap: 40px;
 }
-.navigation{
- display: flex;
- justify-content: space-between;
-}
-.navigationBox{
-    display: flex;
-    gap: 40px;
 
-    text-align: center;
-    
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-
-}
-.navigationBox a{
-
-    color: #6F6F6F; 
-}
-.navigationBox a span{
-
-    padding-left: 40px;
-}
-
-.catalogTitle {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    color: var(--dark);
-
-    border-bottom: 2px solid var(--yellow);
-}
 
 .btns{
     display: flex;
