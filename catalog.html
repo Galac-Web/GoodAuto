@@ -14,6 +14,13 @@
 
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/header.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/catalog/header.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/navigation.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -33,13 +40,44 @@
     <title>Good auto</title>
   </head>
   <body>
-    <header class="header none"></header>
+    <header class="header">
+      <div class="wrapper">
+        <div class="bar">
+          <div class="logo">
+            <!-- <img src="./assets/images/header/logo.png" alt="logo" /> -->
+            <p class="logoText">Логотип</p>
+          </div>
+          <nav class="nav">
+            <ul class="navigationPages">
+              <li class="page">
+                <a class="" href="./catalog.html"> Каталог </a>
+              </li>
+              <li class="page">
+                <a class="" href="./blog.html"> Блог </a>
+              </li>
+              <li class="page">
+                <a class="" href="#"> О нас </a>
+              </li>
+              <li class="page">
+                <a class="" href="#"> Контакты </a>
+              </li>
+              <li class="page"><a class="language" href="#">Ru</a></li>
+            </ul>
+          </nav>
+        </div>
+        <img
+          class="headerImg2"
+          src="./assets/images/header/cars.png"
+          alt="three cars"
+        />
+      </div>
+    </header>
     <main class="main">
       <div class="wrapper">
         <div class="navigation">
           <div class="navigationBox">
             <a href="./index.html">Главная страница <span>&#x3e;</span></a>
-            <h2 class="catalogTitle">Каталог</h2>
+            <h2 class="navigationTitle">Каталог</h2>
           </div>
           <div class="btns">
             <button onclick="defaultCards()">
