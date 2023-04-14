@@ -33,6 +33,7 @@
     width: 30.2%;
 
     display: flex;
+    position: relative;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -46,6 +47,21 @@
     color: var(--dark);
     background-color: var(--yellow);
 }
+ .filterTitle::after{
+    content: '';
+    position: absolute;
+
+    right: -20px;
+    bottom: -23px;
+
+    width: 40px;
+    height: 60px;
+
+    transform: rotate(35deg);
+
+    background-color: var(--background);
+    /* --background */
+ }
 .creditWrapper{
     width: 100% !important;
 }
