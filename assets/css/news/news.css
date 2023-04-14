@@ -1,0 +1,149 @@
+.main{
+    padding-top: 80px;
+}
+
+.news {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+
+
+}
+.aside {
+    margin-top: 60px;
+    width: 22.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.categoryTitle {
+    position: relative;
+    width: 100%;
+    padding: 7px 20px;
+
+    margin-bottom:10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    
+    color: var(--dark);
+    background-color: var(--yellow);
+}
+.categoryTitle::after{
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    width: 30px;
+    height: 60px;
+    transform: rotate(35deg);
+    background-color: var(--background);
+}
+
+.castegoryBtn {
+    width: 100%;
+
+    padding: 22px 20px;
+
+    background-color: var(--white);
+    color: var(--gray);
+    box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 
+    0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+}
+.readableWrapper {
+    width: 100%;
+    padding: 20px;
+
+    background-color: var(--white);
+    box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 
+    0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+}
+.readableImg {
+    width: 100%;
+    height: 182px;
+    object-fit: cover;
+}
+.readableTitle {
+    font-weight: 600;
+    color: var(--dark);
+
+    margin-top: 20px;
+}
+.readableText {
+    color: var(--gray);
+
+    margin-top: 10px;
+}
+
+
+
+.articles {
+    margin-top: 60px;
+    width: 74.1%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    color: var(--dark);
+}
+
+.article {
+    width: 100%;
+
+}
+.articleImg {
+    width: 100%;
+    height: 253px;
+}
+.articleTitle {
+    margin-top: 40px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 46px;
+
+}
+.articleText {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.articleBtn {
+    width: 31%;
+    min-width: 266px;
+    padding: 22px 64px;
+
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: flex-start;
+
+    background-color: var(--yellow);
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
