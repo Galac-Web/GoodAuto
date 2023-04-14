@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/catalog/filter.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/home/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/catalog/catalog.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css" />
+    <title>Good auto</title>
+  </head>
+  <body>
+    <header class="header none"></header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="navigation">
+          <div class="navigationBox">
+            <a href="./index.html">Главная страница <span>&#x3e;</span></a>
+            <h2 class="catalogTitle">Каталог</h2>
+          </div>
+          <div class="btns">
+            <button onclick="defaultCards()">
+              <img
+                src="./assets/images/catalog/defaultCards.png"
+                alt="маленькие карточки"
+              />
+            </button>
+            <button onclick="largeCards()">
+              <img
+                src="./assets/images/catalog/listCards.png"
+                alt="большие карточки"
+              />
+            </button>
+          </div>
+        </div>
+        <section class="filter">
+          <div class="creditBlock">
+            <h3 class="creditTitle">Оформить кредит</h3>
+            <div class="creditWrapper selectWrapper">
+              <select
+                class="formSelect formSelected"
+                name="credit"
+                id="credit-select"
+                onclick="filterApperance()"
+              >
+                <option value="" selected disabled>Выберите банк</option>
+                <option value="maib">maib</option>
+                <option value="victoria">victoria</option>
+              </select>
+            </div>
+          </div>
+          <div class="filterBlock">
+            <h3 class="filterTitle">Фильтр</h3>
+            <div class="selectWrapper">
+              <select
+                class="formSelect formSelected"
+                name="brand"
+                id="brand-select"
+              >
+                <option value="" selected disabled>Марка модели</option>
+                <option value="mercedez">Мерседез</option>
+                <option value="bmw">БМВ</option>
+                <option value="toyota">Тойота</option>
+                <option value="skoda">Шкода</option>
+              </select>
+            </div>
+            <div class="selectWrapper">
+              <select
+                class="formSelect formSelected"
+                name="brand"
+                id="brand-select"
+              >
+                <option value="" selected disabled>Марка модели</option>
+                <option value="mercedez">Мерседез</option>
+                <option value="bmw">БМВ</option>
+                <option value="toyota">Тойота</option>
+                <option value="skoda">Шкода</option>
+              </select>
+            </div>
+            <div class="selectWrapper">
+              <select
+                class="formSelect formSelected"
+                name="brand"
+                id="brand-select"
+              >
+                <option value="" selected disabled>Марка модели</option>
+                <option value="mercedez">Мерседез</option>
+                <option value="bmw">БМВ</option>
+                <option value="toyota">Тойота</option>
+                <option value="skoda">Шкода</option>
+              </select>
+            </div>
+            <div class="selectWrapper">
+              <select
+                class="formSelect formSelected"
+                name="brand"
+                id="brand-select"
+              >
+                <option value="" selected disabled>Марка модели</option>
+                <option value="mercedez">Мерседез</option>
+                <option value="bmw">БМВ</option>
+                <option value="toyota">Тойота</option>
+                <option value="skoda">Шкода</option>
+              </select>
+            </div>
+            <div class="selectWrapper">
+              <select
+                class="formSelect formSelected"
+                name="brand"
+                id="brand-select"
+              >
+                <option value="" selected disabled>Цена От/До $</option>
+                <option value="min1000-5000">от 1000$ до 5000$</option>
+                <option value="min5000-10000">от 5000$ до 10000$</option>
+                <option value="min10000-30000">от 10000$ до 30000$</option>
+                <option value="min30000-100000">от 30000$ до 100000$</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="catalog">
+          <div class="catalogWrapper">
+            <form action="get" class="creditForm">
+              <div class="contentBlock">
+                <div class="catalogBlock">
+                  <div class="creditLabel">
+                    <div class="creditRangeText">Cумма,€</div>
+                    <output
+                      class="creditRangePrice"
+                      id="rangevalue"
+                      oninput="range.value=value"
+                    >
+                      5000
+                    </output>
+                  </div>
+                  <input
+                    class="creditPriceInput"
+                    type="range"
+                    min="2500"
+                    max="10000"
+                    oninput="rangevalue.value=value"
+                  />
+                  <div class="creditLabel">
+                    <div class="creditRangeText">2500</div>
+                    <div class="creditRangeText">10000</div>
+                  </div>
+                </div>
+                <div class="catalogBlock">
+                  <div class="creditLabel">
+                    <div class="creditRangeText">Срок, мес.</div>
+                    <output class="creditRangePrice" id="timeRangeValue"
+                      >27</output
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    min="6"
+                    max="48"
+                    oninput="timeRangeValue.value=value"
+                  />
+                  <div class="creditLabel">
+                    <div class="creditRangeText">6</div>
+                    <div class="creditRangeText">48</div>
+                  </div>
+                </div>
+                <div class="catalogBlock">
+                  <div class="creditRangeText">К оплате ежемесячно</div>
+                  <div class="catalogSecondBlock">
+                    <b class="creditRangeText">200€</b>
+                    <div class="creditRangeText">от/до</div>
+                    <b class="creditRangeText">210€</b>
+                  </div>
+                </div>
+                <div class="catalogBlock">
+                  <div class="personalData">
+                    <input class="creditInput" type="text" placeholder="Имя" />
+                    <input
+                      class="creditInput"
+                      type="text"
+                      placeholder="Фамилия"
+                    />
+                    <input
+                      class="creditInput"
+                      type="number"
+                      placeholder="Номер телефона"
+                    />
+                    <input
+                      class="creditInput"
+                      type="text"
+                      placeholder="Почта"
+                    />
+
+                    <div class="checkboxBlock">
+                      <input
+                        class="creditCheckbox"
+                        type="checkbox"
+                        id="agreement"
+                        name="agreement"
+                      />
+                      <label class="checkboxLabel" for="agreement"
+                        >Согласен с условиями</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="creditBtn" type="">Оформить</button>
+            </form>
+            <ul class="catalogList">
+              <li class="catalogCard">
+                <div class="catalogContainer">
+                  <div class="catalogInfo">
+                    <div class="catalogILeft">
+                      <div class="catalogILeftContainer">
+                        <h3 class="catalogITitle">Марка</h3>
+                        <p class="catalogIText">
+                          Модель <br class="catalogITextBR" />
+                          автомобиля
+                        </p>
+                      </div>
+                      <span class="catalogIPrice">35 000$</span>
+                    </div>
+                    <div class="catalogIRight">
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalogControls">
+                    <button class="catalogControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.9793 5.68483L18.0414 13.4379C17.9671 13.7366 17.7949 14.0018 17.5523 14.1912C17.3096 14.3806 17.0106 14.4832 16.7028 14.4828H4.75173C4.41364 14.4828 4.08731 14.3587 3.83478 14.1338C3.58225 13.909 3.42114 13.5993 3.38207 13.2634L1.98552 2.06897H1.03448C0.760122 2.06897 0.496997 1.95998 0.302993 1.76597C0.10899 1.57197 0 1.30884 0 1.03448C0 0.760121 0.10899 0.496996 0.302993 0.302993C0.496997 0.10899 0.760122 0 1.03448 0H2.88759C3.13757 1.05419e-05 3.3791 0.0905416 3.56749 0.254851C3.75589 0.419161 3.87842 0.646133 3.91242 0.893793L4.45173 4.82759H19.3104C19.4152 4.82759 19.5186 4.85149 19.6129 4.89747C19.7071 4.94346 19.7895 5.01031 19.854 5.09296C19.9185 5.1756 19.9633 5.27186 19.9851 5.37442C20.0068 5.47698 20.0048 5.58314 19.9793 5.68483ZM4.13793 17.931C4.13793 19.0717 5.06621 20 6.2069 20C7.34759 20 8.27587 19.0717 8.27587 17.931C8.27587 16.7903 7.34759 15.8621 6.2069 15.8621C5.06621 15.8621 4.13793 16.7903 4.13793 17.931ZM16.5517 17.931C16.5517 16.7903 15.6235 15.8621 14.4828 15.8621C13.3421 15.8621 12.4138 16.7903 12.4138 17.931C12.4138 19.0717 13.3421 20 14.4828 20C15.6235 20 16.5517 19.0717 16.5517 17.931Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">Оформить</span>
+                    </button>
+                    <button class="catalogControl searchControl none">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.5264 17.2037L14.9282 12.5423C15.7368 11.2395 16.1649 9.73118 16.1629 8.19198C16.1629 3.66741 12.5446 0 8.08129 0C3.61803 0 0 3.66741 0 8.19198C0 12.7167 3.61786 16.3838 8.08129 16.3838C9.73211 16.3859 11.3436 15.8732 12.6971 14.9151L17.2405 19.5211C17.3905 19.6732 17.5687 19.7939 17.7649 19.8761C17.961 19.9582 18.1712 20.0004 18.3834 20C18.5957 20.0004 18.806 19.9583 19.0022 19.8761C19.1985 19.7939 19.3767 19.6733 19.5269 19.5211C19.8299 19.2137 20 18.7969 20 18.3623C19.9999 17.9277 19.8295 17.511 19.5264 17.2037ZM8.08129 13.7297C5.06453 13.7297 2.61872 11.2506 2.61872 8.19232C2.61872 5.13407 5.06453 2.65476 8.08129 2.65476C11.0982 2.65476 13.5439 5.13407 13.5439 8.19232C13.5439 11.2506 11.0982 13.7297 8.08129 13.7297Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                    </button>
+                    <button class="catalogControl favoriteControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.4134 1.95725C17.3781 0.695124 15.9575 0 14.413 0C13.2585 0 12.2013 0.41026 11.2704 1.21928C10.8008 1.6276 10.3752 2.12726 10 2.71033C9.62492 2.12739 9.19922 1.6276 8.72941 1.21928C7.79875 0.41026 6.74148 0 5.58699 0C4.0425 0 2.62176 0.695124 1.58645 1.95725C0.563516 3.20463 0 4.90876 0 6.7559C0 8.65704 0.630351 10.3974 1.98363 12.2329C3.19426 13.8747 4.93422 15.5415 6.94914 17.4714C7.63719 18.1306 8.41707 18.8776 9.22684 19.6734C9.4408 19.8841 9.71557 20.0001 10 20C10.2846 20 10.5592 19.884 10.7729 19.6738C11.5826 18.8778 12.363 18.1304 13.0513 17.4709C15.0659 15.5412 16.8059 13.8747 18.0165 12.2327C19.3698 10.3974 20 8.65708 20 6.75572C20 4.90876 19.4365 3.20463 18.4134 1.95725Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">В избранное</span>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  class="catalogImg"
+                  src="./assets/images/catalog/Автомобиль.webp"
+                  alt="машина ауди"
+                />
+              </li>
+              <li class="catalogCard">
+                <div class="catalogContainer">
+                  <div class="catalogInfo">
+                    <div class="catalogILeft">
+                      <div class="catalogILeftContainer">
+                        <h3 class="catalogITitle">Марка</h3>
+                        <p class="catalogIText">
+                          Модель <br class="catalogITextBR" />
+                          автомобиля
+                        </p>
+                      </div>
+                      <span class="catalogIPrice">35 000$</span>
+                    </div>
+                    <div class="catalogIRight">
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalogControls">
+                    <button class="catalogControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.9793 5.68483L18.0414 13.4379C17.9671 13.7366 17.7949 14.0018 17.5523 14.1912C17.3096 14.3806 17.0106 14.4832 16.7028 14.4828H4.75173C4.41364 14.4828 4.08731 14.3587 3.83478 14.1338C3.58225 13.909 3.42114 13.5993 3.38207 13.2634L1.98552 2.06897H1.03448C0.760122 2.06897 0.496997 1.95998 0.302993 1.76597C0.10899 1.57197 0 1.30884 0 1.03448C0 0.760121 0.10899 0.496996 0.302993 0.302993C0.496997 0.10899 0.760122 0 1.03448 0H2.88759C3.13757 1.05419e-05 3.3791 0.0905416 3.56749 0.254851C3.75589 0.419161 3.87842 0.646133 3.91242 0.893793L4.45173 4.82759H19.3104C19.4152 4.82759 19.5186 4.85149 19.6129 4.89747C19.7071 4.94346 19.7895 5.01031 19.854 5.09296C19.9185 5.1756 19.9633 5.27186 19.9851 5.37442C20.0068 5.47698 20.0048 5.58314 19.9793 5.68483ZM4.13793 17.931C4.13793 19.0717 5.06621 20 6.2069 20C7.34759 20 8.27587 19.0717 8.27587 17.931C8.27587 16.7903 7.34759 15.8621 6.2069 15.8621C5.06621 15.8621 4.13793 16.7903 4.13793 17.931ZM16.5517 17.931C16.5517 16.7903 15.6235 15.8621 14.4828 15.8621C13.3421 15.8621 12.4138 16.7903 12.4138 17.931C12.4138 19.0717 13.3421 20 14.4828 20C15.6235 20 16.5517 19.0717 16.5517 17.931Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">Оформить</span>
+                    </button>
+                    <button class="catalogControl searchControl none">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.5264 17.2037L14.9282 12.5423C15.7368 11.2395 16.1649 9.73118 16.1629 8.19198C16.1629 3.66741 12.5446 0 8.08129 0C3.61803 0 0 3.66741 0 8.19198C0 12.7167 3.61786 16.3838 8.08129 16.3838C9.73211 16.3859 11.3436 15.8732 12.6971 14.9151L17.2405 19.5211C17.3905 19.6732 17.5687 19.7939 17.7649 19.8761C17.961 19.9582 18.1712 20.0004 18.3834 20C18.5957 20.0004 18.806 19.9583 19.0022 19.8761C19.1985 19.7939 19.3767 19.6733 19.5269 19.5211C19.8299 19.2137 20 18.7969 20 18.3623C19.9999 17.9277 19.8295 17.511 19.5264 17.2037ZM8.08129 13.7297C5.06453 13.7297 2.61872 11.2506 2.61872 8.19232C2.61872 5.13407 5.06453 2.65476 8.08129 2.65476C11.0982 2.65476 13.5439 5.13407 13.5439 8.19232C13.5439 11.2506 11.0982 13.7297 8.08129 13.7297Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                    </button>
+                    <button class="catalogControl favoriteControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.4134 1.95725C17.3781 0.695124 15.9575 0 14.413 0C13.2585 0 12.2013 0.41026 11.2704 1.21928C10.8008 1.6276 10.3752 2.12726 10 2.71033C9.62492 2.12739 9.19922 1.6276 8.72941 1.21928C7.79875 0.41026 6.74148 0 5.58699 0C4.0425 0 2.62176 0.695124 1.58645 1.95725C0.563516 3.20463 0 4.90876 0 6.7559C0 8.65704 0.630351 10.3974 1.98363 12.2329C3.19426 13.8747 4.93422 15.5415 6.94914 17.4714C7.63719 18.1306 8.41707 18.8776 9.22684 19.6734C9.4408 19.8841 9.71557 20.0001 10 20C10.2846 20 10.5592 19.884 10.7729 19.6738C11.5826 18.8778 12.363 18.1304 13.0513 17.4709C15.0659 15.5412 16.8059 13.8747 18.0165 12.2327C19.3698 10.3974 20 8.65708 20 6.75572C20 4.90876 19.4365 3.20463 18.4134 1.95725Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">В избранное</span>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  class="catalogImg"
+                  src="./assets/images/catalog/Автомобиль.webp"
+                  alt="машина ауди"
+                />
+              </li>
+              <li class="catalogCard">
+                <div class="catalogContainer">
+                  <div class="catalogInfo">
+                    <div class="catalogILeft">
+                      <div class="catalogILeftContainer">
+                        <h3 class="catalogITitle">Марка</h3>
+                        <p class="catalogIText">
+                          Модель <br class="catalogITextBR" />
+                          автомобиля
+                        </p>
+                      </div>
+                      <span class="catalogIPrice">35 000$</span>
+                    </div>
+                    <div class="catalogIRight">
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalogControls">
+                    <button class="catalogControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.9793 5.68483L18.0414 13.4379C17.9671 13.7366 17.7949 14.0018 17.5523 14.1912C17.3096 14.3806 17.0106 14.4832 16.7028 14.4828H4.75173C4.41364 14.4828 4.08731 14.3587 3.83478 14.1338C3.58225 13.909 3.42114 13.5993 3.38207 13.2634L1.98552 2.06897H1.03448C0.760122 2.06897 0.496997 1.95998 0.302993 1.76597C0.10899 1.57197 0 1.30884 0 1.03448C0 0.760121 0.10899 0.496996 0.302993 0.302993C0.496997 0.10899 0.760122 0 1.03448 0H2.88759C3.13757 1.05419e-05 3.3791 0.0905416 3.56749 0.254851C3.75589 0.419161 3.87842 0.646133 3.91242 0.893793L4.45173 4.82759H19.3104C19.4152 4.82759 19.5186 4.85149 19.6129 4.89747C19.7071 4.94346 19.7895 5.01031 19.854 5.09296C19.9185 5.1756 19.9633 5.27186 19.9851 5.37442C20.0068 5.47698 20.0048 5.58314 19.9793 5.68483ZM4.13793 17.931C4.13793 19.0717 5.06621 20 6.2069 20C7.34759 20 8.27587 19.0717 8.27587 17.931C8.27587 16.7903 7.34759 15.8621 6.2069 15.8621C5.06621 15.8621 4.13793 16.7903 4.13793 17.931ZM16.5517 17.931C16.5517 16.7903 15.6235 15.8621 14.4828 15.8621C13.3421 15.8621 12.4138 16.7903 12.4138 17.931C12.4138 19.0717 13.3421 20 14.4828 20C15.6235 20 16.5517 19.0717 16.5517 17.931Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">Оформить</span>
+                    </button>
+                    <button class="catalogControl searchControl none">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.5264 17.2037L14.9282 12.5423C15.7368 11.2395 16.1649 9.73118 16.1629 8.19198C16.1629 3.66741 12.5446 0 8.08129 0C3.61803 0 0 3.66741 0 8.19198C0 12.7167 3.61786 16.3838 8.08129 16.3838C9.73211 16.3859 11.3436 15.8732 12.6971 14.9151L17.2405 19.5211C17.3905 19.6732 17.5687 19.7939 17.7649 19.8761C17.961 19.9582 18.1712 20.0004 18.3834 20C18.5957 20.0004 18.806 19.9583 19.0022 19.8761C19.1985 19.7939 19.3767 19.6733 19.5269 19.5211C19.8299 19.2137 20 18.7969 20 18.3623C19.9999 17.9277 19.8295 17.511 19.5264 17.2037ZM8.08129 13.7297C5.06453 13.7297 2.61872 11.2506 2.61872 8.19232C2.61872 5.13407 5.06453 2.65476 8.08129 2.65476C11.0982 2.65476 13.5439 5.13407 13.5439 8.19232C13.5439 11.2506 11.0982 13.7297 8.08129 13.7297Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                    </button>
+                    <button class="catalogControl favoriteControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.4134 1.95725C17.3781 0.695124 15.9575 0 14.413 0C13.2585 0 12.2013 0.41026 11.2704 1.21928C10.8008 1.6276 10.3752 2.12726 10 2.71033C9.62492 2.12739 9.19922 1.6276 8.72941 1.21928C7.79875 0.41026 6.74148 0 5.58699 0C4.0425 0 2.62176 0.695124 1.58645 1.95725C0.563516 3.20463 0 4.90876 0 6.7559C0 8.65704 0.630351 10.3974 1.98363 12.2329C3.19426 13.8747 4.93422 15.5415 6.94914 17.4714C7.63719 18.1306 8.41707 18.8776 9.22684 19.6734C9.4408 19.8841 9.71557 20.0001 10 20C10.2846 20 10.5592 19.884 10.7729 19.6738C11.5826 18.8778 12.363 18.1304 13.0513 17.4709C15.0659 15.5412 16.8059 13.8747 18.0165 12.2327C19.3698 10.3974 20 8.65708 20 6.75572C20 4.90876 19.4365 3.20463 18.4134 1.95725Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">В избранное</span>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  class="catalogImg"
+                  src="./assets/images/catalog/Автомобиль.webp"
+                  alt="машина ауди"
+                />
+              </li>
+              <li class="catalogCard">
+                <div class="catalogContainer">
+                  <div class="catalogInfo">
+                    <div class="catalogILeft">
+                      <div class="catalogILeftContainer">
+                        <h3 class="catalogITitle">Марка</h3>
+                        <p class="catalogIText">
+                          Модель <br class="catalogITextBR" />
+                          автомобиля
+                        </p>
+                      </div>
+                      <span class="catalogIPrice">35 000$</span>
+                    </div>
+                    <div class="catalogIRight">
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                      <div class="catalogILine">
+                        <img
+                          class="catalogILineImg"
+                          src="./assets/images/icons/gasStation-min.svg"
+                          alt="бензоколонка"
+                        />
+                        <p class="catalogIText">Тип топлива</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalogControls">
+                    <button class="catalogControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.9793 5.68483L18.0414 13.4379C17.9671 13.7366 17.7949 14.0018 17.5523 14.1912C17.3096 14.3806 17.0106 14.4832 16.7028 14.4828H4.75173C4.41364 14.4828 4.08731 14.3587 3.83478 14.1338C3.58225 13.909 3.42114 13.5993 3.38207 13.2634L1.98552 2.06897H1.03448C0.760122 2.06897 0.496997 1.95998 0.302993 1.76597C0.10899 1.57197 0 1.30884 0 1.03448C0 0.760121 0.10899 0.496996 0.302993 0.302993C0.496997 0.10899 0.760122 0 1.03448 0H2.88759C3.13757 1.05419e-05 3.3791 0.0905416 3.56749 0.254851C3.75589 0.419161 3.87842 0.646133 3.91242 0.893793L4.45173 4.82759H19.3104C19.4152 4.82759 19.5186 4.85149 19.6129 4.89747C19.7071 4.94346 19.7895 5.01031 19.854 5.09296C19.9185 5.1756 19.9633 5.27186 19.9851 5.37442C20.0068 5.47698 20.0048 5.58314 19.9793 5.68483ZM4.13793 17.931C4.13793 19.0717 5.06621 20 6.2069 20C7.34759 20 8.27587 19.0717 8.27587 17.931C8.27587 16.7903 7.34759 15.8621 6.2069 15.8621C5.06621 15.8621 4.13793 16.7903 4.13793 17.931ZM16.5517 17.931C16.5517 16.7903 15.6235 15.8621 14.4828 15.8621C13.3421 15.8621 12.4138 16.7903 12.4138 17.931C12.4138 19.0717 13.3421 20 14.4828 20C15.6235 20 16.5517 19.0717 16.5517 17.931Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">Оформить</span>
+                    </button>
+                    <button class="catalogControl searchControl none">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.5264 17.2037L14.9282 12.5423C15.7368 11.2395 16.1649 9.73118 16.1629 8.19198C16.1629 3.66741 12.5446 0 8.08129 0C3.61803 0 0 3.66741 0 8.19198C0 12.7167 3.61786 16.3838 8.08129 16.3838C9.73211 16.3859 11.3436 15.8732 12.6971 14.9151L17.2405 19.5211C17.3905 19.6732 17.5687 19.7939 17.7649 19.8761C17.961 19.9582 18.1712 20.0004 18.3834 20C18.5957 20.0004 18.806 19.9583 19.0022 19.8761C19.1985 19.7939 19.3767 19.6733 19.5269 19.5211C19.8299 19.2137 20 18.7969 20 18.3623C19.9999 17.9277 19.8295 17.511 19.5264 17.2037ZM8.08129 13.7297C5.06453 13.7297 2.61872 11.2506 2.61872 8.19232C2.61872 5.13407 5.06453 2.65476 8.08129 2.65476C11.0982 2.65476 13.5439 5.13407 13.5439 8.19232C13.5439 11.2506 11.0982 13.7297 8.08129 13.7297Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                    </button>
+                    <button class="catalogControl favoriteControl">
+                      <svg
+                        class="catalogControlSvg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.4134 1.95725C17.3781 0.695124 15.9575 0 14.413 0C13.2585 0 12.2013 0.41026 11.2704 1.21928C10.8008 1.6276 10.3752 2.12726 10 2.71033C9.62492 2.12739 9.19922 1.6276 8.72941 1.21928C7.79875 0.41026 6.74148 0 5.58699 0C4.0425 0 2.62176 0.695124 1.58645 1.95725C0.563516 3.20463 0 4.90876 0 6.7559C0 8.65704 0.630351 10.3974 1.98363 12.2329C3.19426 13.8747 4.93422 15.5415 6.94914 17.4714C7.63719 18.1306 8.41707 18.8776 9.22684 19.6734C9.4408 19.8841 9.71557 20.0001 10 20C10.2846 20 10.5592 19.884 10.7729 19.6738C11.5826 18.8778 12.363 18.1304 13.0513 17.4709C15.0659 15.5412 16.8059 13.8747 18.0165 12.2327C19.3698 10.3974 20 8.65708 20 6.75572C20 4.90876 19.4365 3.20463 18.4134 1.95725Z"
+                          fill="#181819"
+                        />
+                      </svg>
+                      <span class="catalogControlText">В избранное</span>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  class="catalogImg"
+                  src="./assets/images/catalog/Автомобиль.webp"
+                  alt="машина ауди"
+                />
+              </li>
+            </ul>
+          </div>
+          <button class="btn catalogBtn">Посмотреть больше</button>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <section class="footerMain">
+        <div class="wrapper footerWrapper">
+          <h2 class="footerTitle">Контакты</h2>
+          <div class="footerContainer">
+            <form class="formFooter" action="">
+              <input
+                class="formFooterInput"
+                type="text"
+                placeholder="Имя и фамилия"
+              />
+              <input
+                class="formFooterInput"
+                type="text"
+                placeholder="Имя и фамилия"
+              />
+              <input
+                class="formFooterInput"
+                type="text"
+                placeholder="Имя и фамилия"
+              />
+              <input
+                class="formFooterInput"
+                type="text"
+                placeholder="Имя и фамилия"
+              />
+              <button class="btn formFooterBtn" type="submit">Отправить</button>
+            </form>
+            <iframe
+              class="footerMap"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21743.857889778486!2d28.8456704!3d47.0601988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d17f4fe8a41%3A0x30ed6197f2f2d63!2sMETRO%20Moldova!5e0!3m2!1sru!2s!4v1680963543498!5m2!1sru!2s"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="footerInfo">
+              <p class="footerLogo">Логотип</p>
+              <div class="footerContacts">
+                <p>Город</p>
+                <p>Адресс</p>
+                <a href="mailto:mailcompany@gmail.com">Почта</a>
+                <a href="tel:+#">Номер телефона</a>
+              </div>
+              <div class="footerSocial">
+                <a class="footerSocialLink" href="#">
+                  <svg
+                    class="footerSocialSvg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M35.7422 30C35.7422 33.1714 33.1713 35.7422 30 35.7422C26.8287 35.7422 24.2578 33.1713 24.2578 30C24.2578 26.8287 26.8287 24.2578 30 24.2578C33.1713 24.2578 35.7422 26.8287 35.7422 30Z"
+                      fill="#ECECEC"
+                    />
+                    <path
+                      d="M43.4289 19.8399C43.1528 19.0916 42.7124 18.4148 42.1403 17.8591C41.5847 17.2868 40.9078 16.8465 40.1595 16.5705C39.5525 16.3348 38.6407 16.0541 36.9611 15.9777C35.1442 15.8949 34.5995 15.877 29.9999 15.877C25.3998 15.877 24.8552 15.8944 23.0388 15.9773C21.3592 16.0541 20.4468 16.3347 19.8404 16.5705C19.092 16.8464 18.4151 17.2867 17.8595 17.8591C17.2873 18.4148 16.8468 19.0916 16.5705 19.8399C16.3348 20.4469 16.0541 21.3592 15.9777 23.0387C15.8949 24.8552 15.877 25.3998 15.877 29.9999C15.877 34.5995 15.8949 35.1442 15.9777 36.9611C16.0541 38.6406 16.3348 39.5526 16.5705 40.1595C16.8467 40.9077 17.287 41.5846 17.8591 42.1403C18.4147 42.7125 19.0916 43.1529 19.8399 43.4289C20.4469 43.665 21.3592 43.9457 23.0388 44.0221C24.8552 44.105 25.3994 44.1224 29.9995 44.1224C34.6 44.1224 35.1447 44.105 36.9606 44.0221C38.6402 43.9457 39.5526 43.665 40.1595 43.4289C40.9025 43.1423 41.5772 42.7034 42.1403 42.1403C42.7034 41.5772 43.1423 40.9025 43.4289 40.1595C43.6646 39.5525 43.9452 38.6407 44.0221 36.9611C44.105 35.1442 44.1224 34.5995 44.1224 29.9999C44.1224 25.3998 44.105 24.8552 44.0221 23.0387C43.9457 21.3592 43.665 20.4468 43.4289 19.8399ZM29.9999 38.8453C25.1143 38.8453 21.1537 34.8851 21.1537 29.9995C21.1537 25.1138 25.1143 21.1537 29.9999 21.1537C34.8852 21.1537 38.8457 25.1138 38.8457 29.9995C38.8457 34.8851 34.8852 38.8453 29.9999 38.8453ZM39.1955 22.8712C38.0539 22.8712 37.1283 21.9455 37.1283 20.804C37.1283 19.6625 38.0539 18.7367 39.1955 18.7367C40.3371 18.7367 41.2627 19.6622 41.2627 20.8039C41.2622 21.9455 40.3371 22.8712 39.1955 22.8712Z"
+                      fill="#ECECEC"
+                    />
+                    <path
+                      d="M30 0C13.434 0 0 13.434 0 30C0 46.566 13.434 60 30 60C46.566 60 60 46.566 60 30C60 13.434 46.566 0 30 0ZM47.1226 37.1021C47.0394 38.936 46.7477 40.188 46.322 41.2839C45.8794 42.4282 45.2027 43.4675 44.3351 44.3351C43.4675 45.2027 42.4282 45.8794 41.2839 46.322C40.1884 46.7477 38.936 47.0388 37.1026 47.1226C35.2657 47.2064 34.6788 47.2266 30.0005 47.2266C25.3216 47.2266 24.7352 47.2064 22.8977 47.1226C21.0645 47.0388 19.8121 46.7477 18.7165 46.322C17.5669 45.8895 16.5255 45.2114 15.6652 44.3348C14.7889 43.4744 14.1109 42.4332 13.6785 41.2839C13.2527 40.1884 12.9612 38.936 12.8779 37.1026C12.7931 35.2651 12.7734 34.6784 12.7734 30C12.7734 25.3216 12.7931 24.7348 12.8774 22.8979C12.9606 21.064 13.2518 19.8121 13.6775 18.7161C14.1101 17.5666 14.7884 16.5254 15.665 15.6652C16.5253 14.7886 17.5666 14.1104 18.7161 13.678C19.8121 13.2523 21.064 12.9612 22.8979 12.8774C24.7348 12.7936 25.3216 12.7734 30 12.7734C34.6784 12.7734 35.2652 12.7936 37.1021 12.8777C38.936 12.9612 40.1879 13.2523 41.2839 13.6775C42.4335 14.1102 43.4749 14.7885 44.3354 15.665C45.2117 16.5254 45.8896 17.5667 46.322 18.7161C46.7482 19.8121 47.0393 21.064 47.1231 22.8979C47.2069 24.7348 47.2266 25.3216 47.2266 30C47.2266 34.6784 47.2069 35.2652 47.1226 37.1021Z"
+                      fill="#ECECEC"
+                    />
+                  </svg>
+                </a>
+                <a class="footerSocialLink" href="#">
+                  <svg
+                    class="footerSocialSvg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M35.7422 30C35.7422 33.1714 33.1713 35.7422 30 35.7422C26.8287 35.7422 24.2578 33.1713 24.2578 30C24.2578 26.8287 26.8287 24.2578 30 24.2578C33.1713 24.2578 35.7422 26.8287 35.7422 30Z"
+                      fill="#ECECEC"
+                    />
+                    <path
+                      d="M43.4289 19.8399C43.1528 19.0916 42.7124 18.4148 42.1403 17.8591C41.5847 17.2868 40.9078 16.8465 40.1595 16.5705C39.5525 16.3348 38.6407 16.0541 36.9611 15.9777C35.1442 15.8949 34.5995 15.877 29.9999 15.877C25.3998 15.877 24.8552 15.8944 23.0388 15.9773C21.3592 16.0541 20.4468 16.3347 19.8404 16.5705C19.092 16.8464 18.4151 17.2867 17.8595 17.8591C17.2873 18.4148 16.8468 19.0916 16.5705 19.8399C16.3348 20.4469 16.0541 21.3592 15.9777 23.0387C15.8949 24.8552 15.877 25.3998 15.877 29.9999C15.877 34.5995 15.8949 35.1442 15.9777 36.9611C16.0541 38.6406 16.3348 39.5526 16.5705 40.1595C16.8467 40.9077 17.287 41.5846 17.8591 42.1403C18.4147 42.7125 19.0916 43.1529 19.8399 43.4289C20.4469 43.665 21.3592 43.9457 23.0388 44.0221C24.8552 44.105 25.3994 44.1224 29.9995 44.1224C34.6 44.1224 35.1447 44.105 36.9606 44.0221C38.6402 43.9457 39.5526 43.665 40.1595 43.4289C40.9025 43.1423 41.5772 42.7034 42.1403 42.1403C42.7034 41.5772 43.1423 40.9025 43.4289 40.1595C43.6646 39.5525 43.9452 38.6407 44.0221 36.9611C44.105 35.1442 44.1224 34.5995 44.1224 29.9999C44.1224 25.3998 44.105 24.8552 44.0221 23.0387C43.9457 21.3592 43.665 20.4468 43.4289 19.8399ZM29.9999 38.8453C25.1143 38.8453 21.1537 34.8851 21.1537 29.9995C21.1537 25.1138 25.1143 21.1537 29.9999 21.1537C34.8852 21.1537 38.8457 25.1138 38.8457 29.9995C38.8457 34.8851 34.8852 38.8453 29.9999 38.8453ZM39.1955 22.8712C38.0539 22.8712 37.1283 21.9455 37.1283 20.804C37.1283 19.6625 38.0539 18.7367 39.1955 18.7367C40.3371 18.7367 41.2627 19.6622 41.2627 20.8039C41.2622 21.9455 40.3371 22.8712 39.1955 22.8712Z"
+                      fill="#ECECEC"
+                    />
+                    <path
+                      d="M30 0C13.434 0 0 13.434 0 30C0 46.566 13.434 60 30 60C46.566 60 60 46.566 60 30C60 13.434 46.566 0 30 0ZM47.1226 37.1021C47.0394 38.936 46.7477 40.188 46.322 41.2839C45.8794 42.4282 45.2027 43.4675 44.3351 44.3351C43.4675 45.2027 42.4282 45.8794 41.2839 46.322C40.1884 46.7477 38.936 47.0388 37.1026 47.1226C35.2657 47.2064 34.6788 47.2266 30.0005 47.2266C25.3216 47.2266 24.7352 47.2064 22.8977 47.1226C21.0645 47.0388 19.8121 46.7477 18.7165 46.322C17.5669 45.8895 16.5255 45.2114 15.6652 44.3348C14.7889 43.4744 14.1109 42.4332 13.6785 41.2839C13.2527 40.1884 12.9612 38.936 12.8779 37.1026C12.7931 35.2651 12.7734 34.6784 12.7734 30C12.7734 25.3216 12.7931 24.7348 12.8774 22.8979C12.9606 21.064 13.2518 19.8121 13.6775 18.7161C14.1101 17.5666 14.7884 16.5254 15.665 15.6652C16.5253 14.7886 17.5666 14.1104 18.7161 13.678C19.8121 13.2523 21.064 12.9612 22.8979 12.8774C24.7348 12.7936 25.3216 12.7734 30 12.7734C34.6784 12.7734 35.2652 12.7936 37.1021 12.8777C38.936 12.9612 40.1879 13.2523 41.2839 13.6775C42.4335 14.1102 43.4749 14.7885 44.3354 15.665C45.2117 16.5254 45.8896 17.5667 46.322 18.7161C46.7482 19.8121 47.0393 21.064 47.1231 22.8979C47.2069 24.7348 47.2266 25.3216 47.2266 30C47.2266 34.6784 47.2069 35.2652 47.1226 37.1021Z"
+                      fill="#ECECEC"
+                    />
+                  </svg>
+                </a>
+                <a class="footerSocialLink" href="#">
+                  <svg
+                    class="footerSocialSvg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M35.7422 30C35.7422 33.1714 33.1713 35.7422 30 35.7422C26.8287 35.7422 24.2578 33.1713 24.2578 30C24.2578 26.8287 26.8287 24.2578 30 24.2578C33.1713 24.2578 35.7422 26.8287 35.7422 30Z"
+                      fill="#ECECEC"
+                    />
+                    <path
+                      d="M43.4289 19.8399C43.1528 19.0916 42.7124 18.4148 42.1403 17.8591C41.5847 17.2868 40.9078 16.8465 40.1595 16.5705C39.5525 16.3348 38.6407 16.0541 36.9611 15.9777C35.1442 15.8949 34.5995 15.877 29.9999 15.877C25.3998 15.877 24.8552 15.8944 23.0388 15.9773C21.3592 16.0541 20.4468 16.3347 19.8404 16.5705C19.092 16.8464 18.4151 17.2867 17.8595 17.8591C17.2873 18.4148 16.8468 19.0916 16.5705 19.8399C16.3348 20.4469 16.0541 21.3592 15.9777 23.0387C15.8949 24.8552 15.877 25.3998 15.877 29.9999C15.877 34.5995 15.8949 35.1442 15.9777 36.9611C16.0541 38.6406 16.3348 39.5526 16.5705 40.1595C16.8467 40.9077 17.287 41.5846 17.8591 42.1403C18.4147 42.7125 19.0916 43.1529 19.8399 43.4289C20.4469 43.665 21.3592 43.9457 23.0388 44.0221C24.8552 44.105 25.3994 44.1224 29.9995 44.1224C34.6 44.1224 35.1447 44.105 36.9606 44.0221C38.6402 43.9457 39.5526 43.665 40.1595 43.4289C40.9025 43.1423 41.5772 42.7034 42.1403 42.1403C42.7034 41.5772 43.1423 40.9025 43.4289 40.1595C43.6646 39.5525 43.9452 38.6407 44.0221 36.9611C44.105 35.1442 44.1224 34.5995 44.1224 29.9999C44.1224 25.3998 44.105 24.8552 44.0221 23.0387C43.9457 21.3592 43.665 20.4468 43.4289 19.8399ZM29.9999 38.8453C25.1143 38.8453 21.1537 34.8851 21.1537 29.9995C21.1537 25.1138 25.1143 21.1537 29.9999 21.1537C34.8852 21.1537 38.8457 25.1138 38.8457 29.9995C38.8457 34.8851 34.8852 38.8453 29.9999 38.8453ZM39.1955 22.8712C38.0539 22.8712 37.1283 21.9455 37.1283 20.804C37.1283 19.6625 38.0539 18.7367 39.1955 18.7367C40.3371 18.7367 41.2627 19.6622 41.2627 20.8039C41.2622 21.9455 40.3371 22.8712 39.1955 22.8712Z"
+                      fill="#ECECEC"
+                    />
+                    <path
+                      d="M30 0C13.434 0 0 13.434 0 30C0 46.566 13.434 60 30 60C46.566 60 60 46.566 60 30C60 13.434 46.566 0 30 0ZM47.1226 37.1021C47.0394 38.936 46.7477 40.188 46.322 41.2839C45.8794 42.4282 45.2027 43.4675 44.3351 44.3351C43.4675 45.2027 42.4282 45.8794 41.2839 46.322C40.1884 46.7477 38.936 47.0388 37.1026 47.1226C35.2657 47.2064 34.6788 47.2266 30.0005 47.2266C25.3216 47.2266 24.7352 47.2064 22.8977 47.1226C21.0645 47.0388 19.8121 46.7477 18.7165 46.322C17.5669 45.8895 16.5255 45.2114 15.6652 44.3348C14.7889 43.4744 14.1109 42.4332 13.6785 41.2839C13.2527 40.1884 12.9612 38.936 12.8779 37.1026C12.7931 35.2651 12.7734 34.6784 12.7734 30C12.7734 25.3216 12.7931 24.7348 12.8774 22.8979C12.9606 21.064 13.2518 19.8121 13.6775 18.7161C14.1101 17.5666 14.7884 16.5254 15.665 15.6652C16.5253 14.7886 17.5666 14.1104 18.7161 13.678C19.8121 13.2523 21.064 12.9612 22.8979 12.8774C24.7348 12.7936 25.3216 12.7734 30 12.7734C34.6784 12.7734 35.2652 12.7936 37.1021 12.8777C38.936 12.9612 40.1879 13.2523 41.2839 13.6775C42.4335 14.1102 43.4749 14.7885 44.3354 15.665C45.2117 16.5254 45.8896 17.5667 46.322 18.7161C46.7482 19.8121 47.0393 21.064 47.1231 22.8979C47.2069 24.7348 47.2266 25.3216 47.2266 30C47.2266 34.6784 47.2069 35.2652 47.1226 37.1021Z"
+                      fill="#ECECEC"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footerCopyright">
+        <div class="wrapper">2023 Все права защишены.</div>
+      </section>
+    </footer>
+    <script src="./assets/js/catalogPage.js"></script>
+  </body>
+</html>
