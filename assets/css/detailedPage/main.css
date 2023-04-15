@@ -1,0 +1,215 @@
+.creditBlock{
+    margin-top: 60px;
+
+    gap: 20px;
+
+}
+.creditForm{
+    margin-top: 40px;
+}
+.catalogTitle{
+    margin-top: 160px;
+    margin-bottom: 40px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 82px;
+    /* identical to box height */
+    
+    color: var(--dark);
+}
+.detailedInfo{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.leftSide {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.creditBlock {
+    width: 100%;
+}
+.creditForm {
+    width: 100%;
+}
+
+
+.rightSide {
+    width:100%;
+    display: flex;
+
+    margin-top: 60px;
+}
+.rightSideWrapper{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+}
+.rightSideBlock{
+    width:100%;
+    display: flex;
+    gap: 40px;
+}
+
+.cardInfo{
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+}
+
+.cardInfoPrice {
+    margin-bottom: 28px; 
+    /* Использовал отступ снизу чтоб не трогать поле статистики так как хочу сделать его модульным */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: var(--dark);
+    text-align: end;
+}
+
+/* STATS MODULE */
+
+.Stats {
+    width: 100%;
+    display: flex;
+    gap: 70px;
+
+}
+.releaseData {
+    display: flex;
+    gap: 10px;
+}
+.releaseDataText {
+    align-self: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: var(--gray);
+}
+.views {
+    display: flex;
+    gap: 10px;
+}
+.releaseViewsText {
+    align-self: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: var(--gray);
+}
+
+/* ----------------- */
+
+.carInfo{
+    display: flex;
+    gap: 20px;
+    color: var(--black);
+}
+
+
+.detailedControls{
+    z-index: 1;
+    display: flex;
+    position: relative;
+    top: unset;
+    flex-direction: column;
+    justify-content: unset;
+    width: 100%;
+    height: unset;
+
+    gap: 20px;
+}
+.detailedControl {
+    transform: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    position: relative;
+    background-color: var(--yellow);
+
+    box-shadow: 0px 8px 18px rgba(24, 39, 75, 0.12), 0px 12px 42px rgba(24, 39, 75, 0.12);
+}
+.detailedControlSvg {
+
+}
+.detailedControlText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: var(--dark);
+}
+.detailedfavoriteControl {
+    background-color: var(--light-gray);
+}
+
+.additionalInfo{
+    margin-top: 80px;
+
+    background-color: var(--dark);
+}
+
+
+/*  */
+
+.carText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 55%;
+}
+.carTextWD42 {
+    width: 42%;
+}
+
+.carTextTitle {
+    display: flex;
+
+    margin-bottom: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: var(--dark);
+}
+.carTextFlex {
+    display: flex;
+    gap: 40px;
+}
+.carTextProprety {
+}
+.PropretyInfo {
+}
+.carTextParagraph {
+}
