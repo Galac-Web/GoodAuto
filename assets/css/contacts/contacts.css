@@ -1,0 +1,133 @@
+.main{
+    padding-top: 60px;
+}
+
+.consultation {
+    width: 100%;
+    min-height: 893px;
+
+    margin: 78px auto 100px auto;
+
+    background-image: url(../../images/contacts/background.png) ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.consultaitionWrapper {
+    display: flex;
+    gap: 120px;
+    padding-top: 177px;
+
+    color: var(--light);
+}
+.consultationLeft {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 42%;
+}
+.consultationTitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 82px;
+
+    color: var(--light);
+}
+.consultationText {
+    margin-top: 30px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: var(--gray);
+}
+.contacts {
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: var(--light);
+}
+.contact{
+    display: flex;
+    gap: 20px;
+}
+.contactWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contactWrapper a{
+    color: var(--light);
+}
+.contactWrapper a:hover, .contactWrapper a:focus{
+    color: var(--yellow);
+}
+
+.consultationForm {
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--dark);
+}
+.consultationForm input::placeholder{
+    color: var(--gray);
+}
+.formWrapper {
+    display: flex;
+    gap: 40px;
+}
+.formInput{
+    padding: 10px 0 10px 20px;
+
+    background-color: var(--formGray);
+}
+.formBtn{
+    margin-top: 20px;
+    width: 65%;
+    justify-items: center;
+}
+
+
+.geo {
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.geoTitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 82px;
+    
+    color: var(--dark);
+}
+.geoWrapper {
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+.map {
+    width: 65%;
+}
+.geoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
