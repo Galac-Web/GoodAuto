@@ -140,6 +140,7 @@
     justify-content: flex-start;
 
     background-color: var(--yellow);
+    color: var(--dark);
 
     font-family: 'Montserrat';
     font-style: normal;
