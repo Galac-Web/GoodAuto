@@ -40,7 +40,7 @@ function handleEnd() {
 function Next() {
   offset -= width + 40;
   page++;
-  if (offset <= -width * 6) {
+  if (offset <= -width * 5) {
     offset = 0;
     page = 0;
     // sliderList[4].classList.toggle("activeDot");
