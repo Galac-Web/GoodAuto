@@ -1,0 +1,19 @@
+.aboutus {
+    width: 100%;
+    min-height: 651px;
+
+    margin: unset;
+
+    background-image: unset;
+}
+
+.aboutusImg {
+    width: 60%; 
+
+    display: block;
+    position: absolute;
+    right: 0%; 
+    /* -16.5 */
+    bottom: -50%;
+    margin: auto;
+}

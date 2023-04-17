@@ -1,0 +1,42 @@
+.advatages {
+    margin-top: 160px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+
+    color: var(--dark);
+}
+.advatagesTitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 82px;
+
+}
+.advatagesWrapper {
+    display: flex;
+
+    margin-top: 80px;
+    gap: 40px;
+}
+.advatage {
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+}
+.advatageTitle {
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 48px;
+    
+    text-transform: capitalize;
+    
+}
+.advatageText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+}
