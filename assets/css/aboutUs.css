@@ -41,7 +41,7 @@
     
 }
 .aboutusTitle a{
-    color: var(--dark);
+    color: var(--light);
 }
 .aboutusText {
     margin-top: 40px;
