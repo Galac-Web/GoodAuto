@@ -1,5 +1,5 @@
 .advatages {
-    margin-top: 160px;
+    margin-top: 60px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -7,6 +7,8 @@
     color: var(--dark);
 }
 .advatagesTitle {
+    margin-top: 80px;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
