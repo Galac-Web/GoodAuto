@@ -104,6 +104,9 @@
 .footerContacts a{
     color: var(--light);
 }
+.footerContacts a:hover, .footerContacts a:focus{
+    color: var(--yellow);
+}
 .footerSocial {
     display: flex;
     gap: 40px;
