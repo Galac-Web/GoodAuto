@@ -6,6 +6,7 @@
     margin-top: 155px;
 }
 .catalogTitle a {
+    position: relative;
     
     font-family: 'Roboto', sans-serif;
     font-style: normal;

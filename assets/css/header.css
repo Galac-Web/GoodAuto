@@ -52,11 +52,9 @@
     position: relative;
 }
 
-.page a:hover{
-
-}
-
-.page a::after {
+.page a::after,
+.catalogTitle a::after,
+.aboutusTitle a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -68,8 +66,13 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
+.catalogTitle a::after {
+    height: 4px;
+}
 
-.page a:hover::after {
+.page a:hover::after,
+.catalogTitle a:hover::after,
+.aboutusTitle a:hover::after  {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

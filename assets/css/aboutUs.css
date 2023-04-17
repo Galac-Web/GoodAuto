@@ -20,11 +20,17 @@
     background-repeat: no-repeat;
 }
 .aboutusInfo {
+
     width: 40%;
 
     margin: 17% 0 0 0;   /* 200px */ 
 
     color: var(--light);
+}
+.aboutusInfo a{
+    display: flex;
+    max-width: fit-content;
+    position: relative;
 }
 .aboutusTitle {
     font-family: 'Roboto';
@@ -33,6 +39,8 @@
     font-size: 70px;
     line-height: 82px;
     
+}
+.aboutusTitle a{
     color: var(--light);
 }
 .aboutusText {
