@@ -33,6 +33,7 @@
     font-size: 70px;
     line-height: 82px;
     
+    color: var(--light);
 }
 .aboutusText {
     margin-top: 40px;
