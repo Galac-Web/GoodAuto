@@ -1,6 +1,5 @@
 function toggleClass() {
   nav.classList.toggle("none"); // Переключаем класс hide
-  phone.classList.toggle("none");
 }
 
 //SLIDER
@@ -65,5 +64,8 @@ function Prev() {
 }
 function init() {
   width = document.querySelector(".sliderPage").offsetWidth;
-  console.log(width);
+  ScreenWidth = document.querySelector(".header").offsetWidth;
+  if (ScreenWidth <= 768) {
+    nav.classList.toggle("none");
+  }
 }
