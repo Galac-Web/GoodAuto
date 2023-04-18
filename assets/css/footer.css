@@ -70,6 +70,17 @@
 
     border-bottom: 1px solid var(--gray);
 }
+/* Only show invalid ring while not focused */
+.formFooterInput:not(:focus):not(:placeholder-shown):invalid {
+    border-color: var(--red);
+}
+/* .formFooterInput:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+    display: block;	
+  } */
+.formFooterInput:not(:focus):not(:placeholder-shown):valid {
+    border-color: var(--green);
+}
+
 .formFooterBtn{
     margin-top: 66px;
     width: 100%;
