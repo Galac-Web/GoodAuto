@@ -96,6 +96,18 @@
 
     background-color: var(--formGray);
 }
+
+/* Only show invalid ring while not focused */
+.formInput:not(:focus):not(:placeholder-shown):invalid {
+    background-color: var(--red);
+}
+/* .formFooterInput:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+    display: block;	
+  } */
+.formInput:not(:focus):not(:placeholder-shown):valid {
+    background-color: var(--green);
+}
+
 .formBtn{
     margin-top: 20px;
     width: 65%;

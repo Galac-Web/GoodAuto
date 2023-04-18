@@ -73,12 +73,14 @@
 /* Only show invalid ring while not focused */
 .formFooterInput:not(:focus):not(:placeholder-shown):invalid {
     border-color: var(--red);
+    color: var(--red);
 }
 /* .formFooterInput:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
     display: block;	
   } */
 .formFooterInput:not(:focus):not(:placeholder-shown):valid {
     border-color: var(--green);
+    color: var(--green);
 }
 
 .formFooterBtn{

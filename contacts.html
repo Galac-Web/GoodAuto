@@ -145,16 +145,37 @@
           </div>
           <form class="consultationForm" action="">
             <div class="formWrapper">
-              <input class="formInput" type="text" placeholder="Имя" />
-              <input class="formInput" type="text" placeholder="Фамилия" />
+              <input
+                class="formInput"
+                type="text"
+                placeholder="Имя"
+                minlength="3"
+              />
+              <input
+                class="formInput"
+                type="text"
+                placeholder="Фамилия"
+                minlength="3"
+              />
             </div>
             <input
               class="formInput"
               type="text"
               placeholder="Электронная Почта"
+              minlength="3"
             />
-            <input class="formInput" type="tel" placeholder="Номер телефона" />
-            <input class="formInput" type="text" placeholder="Ваше сообшение" />
+            <input
+              class="formInput"
+              type="tel"
+              placeholder="Номер телефона"
+              minlength="8"
+            />
+            <input
+              class="formInput"
+              type="text"
+              placeholder="Ваше сообшение"
+              minlength="3"
+            />
             <button class="btn formBtn" type="submit">Отправить</button>
           </form>
         </div>
