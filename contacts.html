@@ -24,11 +24,6 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="./assets/css/home/header.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
       href="./assets/css/contacts/contacts.css"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/footer.css" />
@@ -42,7 +37,7 @@
             <!-- <img src="./assets/images/header/logo.png" alt="logo" /> -->
             <p class="logoText">Логотип</p>
           </div>
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <ul class="navigationPages">
               <li class="page">
                 <a class="" href="./catalog.html"> Каталог </a>
@@ -59,6 +54,14 @@
               <li class="page"><a class="language" href="#">Ru</a></li>
             </ul>
           </nav>
+          <div class="burgerContainer">
+            <button class="burgerButton" onclick="toggleClass()">Open</button>
+            <div>
+              <span class="burgerBar"></span>
+              <span class="burgerBar"></span>
+              <span class="burgerBar"></span>
+            </div>
+          </div>
         </div>
         <img
           class="headerImg2"
@@ -180,7 +183,7 @@
           </form>
         </div>
       </section>
-      <section class="geo">
+      <section class="geo none">
         <div class="wrapper">
           <h2 class="geoTitle">Где мы находимся</h2>
           <div class="geoWrapper">
@@ -337,6 +340,7 @@
         <div class="wrapper">2023 Все права защишены.</div>
       </section>
     </footer>
+    <script src="./assets/js/toggleMenu.js"></script>
     <script src="./assets/js/catalogPage.js"></script>
   </body>
 </html>

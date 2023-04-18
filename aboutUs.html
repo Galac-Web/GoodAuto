@@ -40,7 +40,7 @@
                 <!-- <img src="./assets/images/header/logo.png" alt="logo" /> -->
                 <p class="logoText">Логотип</p>
               </div>
-              <nav class="nav">
+              <nav class="nav" id="nav">
                 <ul class="navigationPages">
                   <li class="page">
                     <a class="" href="./catalog.html"> Каталог </a>
@@ -57,8 +57,18 @@
                   <li class="page"><a class="language" href="#">Ru</a></li>
                 </ul>
               </nav>
+              <div class="burgerContainer">
+                <button class="burgerButton" onclick="toggleClass()">
+                  Open
+                </button>
+                <div>
+                  <span class="burgerBar"></span>
+                  <span class="burgerBar"></span>
+                  <span class="burgerBar"></span>
+                </div>
+              </div>
             </div>
-            <div class="aboutusInfo">
+            <div class="aboutusInfo aboutusInfoHeader">
               <h2 class="aboutusTitle">О нас</h2>
               <p class="aboutusText">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -249,5 +259,6 @@
         <div class="wrapper">2023 Все права защишены.</div>
       </section>
     </footer>
+    <script src="./assets/js/toggleMenu.js"></script>
   </body>
 </html>

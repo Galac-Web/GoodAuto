@@ -53,7 +53,7 @@
             <!-- <img src="./assets/images/header/logo.png" alt="logo" /> -->
             <p class="logoText">Логотип</p>
           </div>
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <ul class="navigationPages">
               <li class="page">
                 <a class="" href="./catalog.html"> Каталог </a>
@@ -70,6 +70,14 @@
               <li class="page"><a class="language" href="#">Ru</a></li>
             </ul>
           </nav>
+          <div class="burgerContainer">
+            <button class="burgerButton" onclick="toggleClass()">Open</button>
+            <div>
+              <span class="burgerBar"></span>
+              <span class="burgerBar"></span>
+              <span class="burgerBar"></span>
+            </div>
+          </div>
         </div>
         <img
           class="headerImg2"
@@ -82,9 +90,9 @@
       <div class="wrapper">
         <div class="navigation">
           <div class="navigationBox">
-            <a href="./index.html">Главная страница <span>&#x3e;</span></a>
+            <a href="./index.html">Главная<span>&#x3e;</span></a>
             <a href="./catalog.html">Каталог <span>&#x3e;</span></a>
-            <h2 class="navigationTitle">Марка машины</h2>
+            <h2 class="navigationTitle">Марка</h2>
           </div>
         </div>
         <section class="detailedInfo">
@@ -407,7 +415,7 @@
             <div class="additionalInfo"></div>
           </div>
         </section>
-        <section class="catalog">
+        <section class="catalog none">
           <h2 class="catalogTitle">По этой же цене</h2>
           <div class="catalogWrapper">
             <ul class="catalogList">
@@ -927,6 +935,7 @@
         <div class="wrapper">2023 Все права защишены.</div>
       </section>
     </footer>
+    <script src="./assets/js/toggleMenu.js"></script>
     <script src="./assets/js/detailedPage.js"></script>
   </body>
 </html>
