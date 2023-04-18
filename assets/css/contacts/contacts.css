@@ -143,3 +143,126 @@
     flex-direction: column;
     gap: 40px;
 }
+
+
+@media (width <= 375px) {
+    .main{
+        padding-top: 60px;
+    }
+    
+    .consultation {
+        width: 100%;
+        min-height: auto;
+    
+        margin: 39px auto 100px auto;
+    
+        background-image: unset;
+        background-color: var(--dark);
+    }
+    .consultaitionWrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 210px;
+    }
+    .consultationLeft {
+        display: flex;
+        flex-direction: column;
+    
+        max-width: 100%;
+    }
+    .consultationTitle {
+        font-size: 40px;
+        line-height: 42px;
+    
+        color: var(--light);
+    }
+    .consultationText {
+        margin-top: 10px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    
+        color: var(--gray);
+    }
+    .contacts {
+        margin-top: 20px;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    
+        color: var(--light);
+    }
+    .contact{
+        display: flex;
+        gap: 20px;
+    }
+    .contactWrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contactWrapper a{
+        color: var(--light);
+    }
+    .contactWrapper a:hover, .contactWrapper a:focus{
+        color: var(--yellow);
+    }
+    
+    .consultationForm {
+        margin-top: 20px;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+    .formWrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .formInput{
+        padding: 10px 0 10px 20px;
+    
+        background-color: var(--formGray);
+    }
+    .formBtn{
+        margin: 20px auto;
+        width: 100%;
+        justify-items: center;
+    }
+    .geo {
+        margin-top: 160px;
+        margin-bottom: 160px;
+    }
+    .geoTitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 82px;
+        
+        color: var(--dark);
+    }
+    .geoWrapper {
+        margin-top: 80px;
+        display: flex;
+        width: 100%;
+        gap: 40px;
+    }
+    .map {
+        width: 65%;
+    }
+    .geoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}

@@ -141,3 +141,71 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (width <= 768px ) {
+    .catalog {
+        width: 100%;
+    
+        margin-top: 155px;
+    }
+    .catalogTitle a {
+        position: relative;
+        
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 84px;
+    
+        color: var(--dark);
+    }
+    .catalogList {
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    .catalogCard {
+        width: 49%; 
+        margin-bottom: 0px;
+    }
+    .catalogControls{
+        z-index: 2;
+    }
+}
+
+@media (width <= 375px ) {
+    .catalog {
+        width: 100%;
+    
+        margin-top: 105px;
+    }
+    .catalogTitle a {
+        position: relative;
+        
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 42px;
+    
+        color: var(--dark);
+    }
+    .catalogList {
+        gap: 10px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .catalogCard {
+        width: 100%; 
+        margin-bottom: 0px;
+    }
+    .catalogBtn {
+        width: 100%; 
+    }
+    .catalogControls{
+        z-index: 2;
+    }
+    .catalogControl{
+        width: 40px;
+        height:40px;
+    }
+}

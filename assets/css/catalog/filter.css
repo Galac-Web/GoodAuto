@@ -150,3 +150,87 @@
     width: 50%;
     padding-right: 61px;
 }
+
+
+@media (width <= 375px) {
+    .main{
+        padding-top: 55px;
+    }
+    .filter {
+        margin-top: 65px;
+    
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .creditBlock{
+        width: 100%;
+        gap: 20px;
+    }
+    .filterBlock {
+        gap: 20px;
+        width: 100%;
+    }
+    .filterTitle{
+        width: 100%;
+    }
+    .creditWrapper{
+        width: 100% !important;
+    }
+    .selectWrapper{
+        width: 100%;
+    }
+    
+    .formSelect{
+        width: 100%;
+        height: 42px;
+        padding-left: 61px;
+    
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        
+        background-color: var(--light);
+        color: var(--gray);
+    
+    
+        box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12),
+        0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+    }
+    .formSelect:hover, .formSelect:focus{
+        outline: 2px solid var(--light-gray);
+    }
+    
+    .formSelected{
+        background-image: url(../../images/icons/car.svg);
+        background-size: 31px 31px;
+        background-repeat: no-repeat;
+        background-position: 5.5% 50%;
+    }
+    .formFilterBtn {
+    }
+    
+    .formFilterBtn:hover, .formFilterBtn:focus{
+        outline: 2px solid var(--light-gray);
+    }
+    .minMaxWrapper{
+        position: relative;
+        display: flex;
+        width: 31%;
+        height: 42px;
+    
+        background-color: var(--light);
+        color: var(--gray);
+        box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12),
+        0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+    }
+    .filterMin {
+        width: 50%;
+        padding-left: 61px;
+    }
+    .filterMax {
+        width: 50%;
+        padding-right: 61px;
+    }
+}

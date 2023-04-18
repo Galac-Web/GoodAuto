@@ -61,8 +61,6 @@
     background-repeat: no-repeat;
     background-position: 5.5% 50%;
 }
-.formFilterBtn {
-}
 
 .formFilterBtn:hover, .formFilterBtn:focus{
     outline: 2px solid var(--light-gray);
@@ -85,4 +83,45 @@
 .filterMax {
     width: 50%;
     padding-right: 61px;
+}
+
+
+@media (width <= 768px ) {
+    .formFilter{
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .selectWrapper::after {
+        right: 10px;
+    }
+    .formSelect {
+        padding-left: 46px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (width <= 375px ) {
+    .filter{
+        margin-top: unset;
+    }
+    .formFilter{
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .selectWrapper {
+        width: 100%;
+    }
+    .selectWrapper::after {
+        right: 20px;
+    }
+    .formSelect {
+        padding-left: 66px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .formFilterBtn {
+        width: 100%;
+    }
+    
 }

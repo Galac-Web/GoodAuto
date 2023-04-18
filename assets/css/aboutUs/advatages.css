@@ -42,3 +42,48 @@
     line-height: 20px;
 
 }
+
+@media (width <= 375px) {
+    .advatages {
+        margin-top: 40px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+    
+        color: var(--dark);
+    }
+    .advatagesTitle {
+        margin-top: 60px;
+
+        font-size: 35px;
+        line-height: 82px;
+    }
+    .advatagesWrapper {
+        margin-top: 40px;
+        gap: 40px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    .advatage {
+        display: flex;
+        flex-direction: column;
+    
+        gap: 20px;
+    }
+    .advatageTitle {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 48px;
+        
+        text-transform: capitalize;
+        
+    }
+    .advatageText {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    
+    }
+    
+}

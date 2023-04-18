@@ -56,3 +56,30 @@
     opacity: 1;
   }
   
+
+  @media (width <=375px) {
+    .slider {
+      width: 100%;
+    }
+
+    .slider-thumbnails {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    .slider-thumbnails img {
+      display: block;
+      width: 31%;
+      height: auto;
+      margin: 0 2%;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    
+    .slider-thumbnails img:hover {
+      opacity: 1;
+    }
+    
+  }

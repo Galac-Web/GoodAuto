@@ -62,3 +62,67 @@
     bottom: -2%;
     margin: auto;
 }
+
+@media (width <= 768px) {
+    .flex{
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px; 
+        width: 100%;
+    }
+    
+    .aboutusInfo {
+        margin: 40% 0 0 0;   /* 200px */ 
+        width: 100%;
+    }
+    .aboutusText {
+        margin-top: 20px;
+    
+    }
+
+    .aboutusImg {
+        width: 100%; 
+        position: relative;
+    }
+    
+}
+
+@media (width <= 375px) {
+    .aboutus {
+        width: 100%;
+        min-height: 450px;
+        max-height: 450px;
+        margin: 120px auto 100px auto;
+        background-image: url(../images/aboutus/фон.webp);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .flex{
+        flex-direction: column;
+        justify-content: flex-start;
+
+        gap: 0; 
+        width: 100%;
+    }
+    .aboutusInfo {
+        margin-top: 100px;
+        width: 100%;
+    }
+    .aboutusTitle {
+        font-size: 60px;
+        line-height: 62px;
+    }
+    .aboutusText {
+        margin-top: 10px;
+
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .aboutusImg {
+        width: 100%; 
+        position: relative;
+        margin: unset;
+    }
+    
+}

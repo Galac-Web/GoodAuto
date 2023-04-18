@@ -174,3 +174,74 @@
 }
 .carTextParagraph {
 }
+
+@media (width <= 375px) {
+    .creditBlock{
+        margin-top: 60px;
+    
+        gap: 20px;
+    
+    }
+    .detailedInfo{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .leftSide {
+        width: 100%;
+    }
+    
+    .rightSide {
+        flex-direction: column;
+    }
+    .rightSideWrapper{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    
+        gap: 40px;
+    }
+    .rightSideBlock{
+        flex-direction: column;
+        gap: 40px;
+
+        text-align: center;
+    }
+    
+    .cardInfo{
+        display: flex;
+        flex-grow: 2;
+        flex-direction: column;
+        gap: 20px;
+        width: auto;
+    }
+    
+    .cardInfoPrice {
+        margin-bottom: 18px; 
+        /* Использовал отступ снизу чтоб не трогать поле статистики так как хочу сделать его модульным */
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+    
+        color: var(--dark);
+        text-align: end;
+    }
+    
+    
+    .carText {
+        justify-content: center;
+        width: 100%;
+    }
+    .carTextWD42 {
+        width: 100%;
+    }
+    
+    .carTextFlex {
+        justify-content: center;
+    }
+    .carTextTitle {
+        justify-content: center;
+    }
+}

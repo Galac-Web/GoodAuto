@@ -20,6 +20,10 @@
  --animation: '1s show ease';
 }
 
+/* *{
+   outline: 1px solid red;
+} */
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -48,10 +52,14 @@ font-family: 'Roboto', sans-serif; */
   
 @media (width <= 768px){
 .wrapper {
-      max-width: 375px;
+      max-width: 618px;
     }
 }
-
+@media (width <= 375px){
+  .wrapper {
+        max-width: 310px;
+      }
+}
 /* Togglers */
 
 .none{

@@ -93,56 +93,15 @@
 @media (width <= 768px) {
     .reviewsTitle {
         font-weight: 700;
-        font-size: 70px;
-        line-height: 82px;
+        font-size: 50px;
+        line-height: 42px;
     }
     .reviewsText {
-        margin-top: 40px;
-        max-width: 37%;
+        margin-top: 20px;
+        max-width: 60%;
 
         font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-    }
-    .sliderLine {
-        margin-top: 50px;
-    
-        width: 600%;
-        left: 0;
-        display: flex;
-        position: relative;
-        transition: all ease 1s;
-        gap: 40px;
-    }
-    .sliderPage {
-        width: 360px;
-        padding: 40px;
-    }
-    .sliderText {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .sliderUser {
-        display: flex;
-        justify-content: flex-start;
-    
-        margin-top: 20px;
-    
-        gap: 20px;
-    }
-    .sliderUserImg {
-        width: 69px;
-        height: 69px;
-    
-    }
-    .sliderUserData {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    
-        font-weight: 700;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
     }
     .SliderBtns {
@@ -150,6 +109,18 @@
         justify-content: center;
         gap: 42px;
     
-        margin-top: 80px;
+        margin-top: 40px;
+    }
+}
+
+@media (width <= 375px) {
+    .reviewsTitle {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 32px;
+    }
+    .reviewsText {
+        margin-top: 20px;
+        max-width: 100%;
     }
 }

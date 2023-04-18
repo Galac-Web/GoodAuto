@@ -17,3 +17,39 @@
     bottom: -50%;
     margin: auto;
 }
+
+
+@media (width <= 375px) {
+    .aboutus {
+        width: 100%;
+        min-height: 330px;
+    
+        margin: unset;
+    
+        background-image: unset;
+    }
+
+    .aboutusInfoHeader{
+        margin-top: 40px;
+    }
+
+    .aboutusTitle{
+        font-size: 50px;
+        line-height: 62px;
+    }
+    .aboutusTitle{
+        font-size: 50px;
+        line-height: 62px;
+    } 
+    .aboutusT{
+        font-size: 50px;
+        line-height: 62px;
+    }
+    
+    .aboutusImg {
+        width: 80%; 
+        bottom: -45%;
+        margin: auto;
+    }
+    
+}

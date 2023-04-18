@@ -32,3 +32,21 @@
    
     border-bottom: 2px solid var(--yellow);
 }
+
+@media (width <= 375px) {
+    .navigationBox{
+        gap: 20px;
+    }
+    .navigationBox a span{
+       padding-left: 20px;
+
+        gap: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .navigationTitle {
+        font-size: 16px;
+        line-height: 29px;
+        border-bottom: 2px solid var(--yellow);
+    }
+}

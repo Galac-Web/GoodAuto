@@ -39,4 +39,24 @@
     color: var(--gray);
 }
 
-/* ----------------- */
+@media (width <= 375px) {
+    .stats {
+        gap: unset;
+        justify-content: space-between;
+    }
+    .releaseData {
+        gap: 5px;
+    }
+    .releaseDataText {
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+    .views {
+        gap: 5px;
+    }
+    .releaseViewsText {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
